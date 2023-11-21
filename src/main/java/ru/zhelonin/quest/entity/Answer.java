@@ -1,14 +1,27 @@
 package ru.zhelonin.quest.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.util.Objects;
 
+@Entity
+@Table(schema = "test", name = "answers")
 public class Answer {
+    @Id
     private Integer id;
+    @Column(name = "text")
     private String text;
 
     public Answer(Integer id, String text) {
         this.id = id;
         this.text = text;
+    }
+
+    public Answer() {
+
     }
 
     public Integer getId() {
