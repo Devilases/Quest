@@ -16,7 +16,6 @@ public class AnswerService {
            return answerRepository.getAnswerById(4);
         }
         return null;
-
     }
 
     public Answer returnRequiredAnswer2(int id){
